@@ -3,6 +3,7 @@ import { Link, Route, useParams, useRouteMatch } from 'react-router-dom'
 import PartsCard from './PartsCard'
 import Styled from "styled-components"
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import {useSelector, useDispatch} from 'react-redux';
 
 
 const CategoryDiv = Styled.div`
@@ -22,6 +23,7 @@ border-radius: 25px;
 `
 
 export default function CategoryContainer(props) {
+    const cart = useSelector(state => state)
     
     const { id } = useParams()
     const match = useRouteMatch()

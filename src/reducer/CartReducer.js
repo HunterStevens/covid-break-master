@@ -6,7 +6,7 @@ export const initialState = {
     total: 0
 }
 
-export function CartReducer(state, action){
+export function CartReducer(state = initialState, action){
     switch(action.type){
         case ADD_CART : 
             return{
